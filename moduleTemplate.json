@@ -2,22 +2,25 @@
   "moduleInfo": {
     "moduleName": "Mangas-Origines",
     "moduleInitials": "MO",
-    "moduleDesc": "un module pour regarder des mangas webtoon et manhwa en vf",
-    "developer": "Danyspb4ever",
-    "moduleID": "15236485975235",
+    "moduleDesc": "Un module pour regarder des mangas, webtoons et manhwas en VF",
+    "developer": "Bilnaa",
+    "moduleID": "MO001",
     "moduleImage": "https://i.postimg.cc/7hVCyvSC/manga.png",
-    "moduleVersion": 1.26,
+    "moduleVersion": 1.0,
     "moduleLenguage": "FR",
     "moduleType": "Image",
     "baseURL": "https://mangas-origines.fr/",
-    "moduleDeveloperSite": "https://github.com/Danyspb/Modules-Ketsu/tree/main/Mangas-Origines",
-    "UpdateSite": "https://raw.githubusercontent.com/Danyspb/Modules-Ketsu/main/Mangas-Origines/moduleTemplate.json",
+    "moduleDeveloperSite": "https://github.com/Bilnaa/Ketsu-Modules",
+    "UpdateSite": "https://raw.githubusercontent.com/Bilnaa/Ketsu-Modules/refs/heads/main/Mangas-Origines/moduleTemplate.json",
     "preferedServer": "",
     "preferedDownloadServer": "",
-    "blackListed": [
-      ""
-    ]
+    "blackListed": [""]
   },
+  "script": {
+    "getSearchRequest": "function getSearchRequest(query) { return { url: 'https://mangas-origines.fr/?s=' + encodeURIComponent(query), method: 'GET', headers: [], body: null }; }",
+    "getErrorCode": "function getErrorCode(response) { if (response.status !== 200) { return 'Erreur: ' + response.status; } return null; }"
+  }
+},
   "global": {
     "variables": [
       {
